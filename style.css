@@ -1,23 +1,22 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #e6e6e6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.slides {
-  background: white;
-  padding: 20px;
-  width: 300px;
-  border-radius: 10px;
-}
-
-
-
-.slides img {
+.carousel {
+  position: relative;
   width: 100%;
-  border-radius: 10px;
+  max-width: 600px;
+  overflow: hidden;
 }
+.slides img {
+  display: none; /* Hide all images by default */
+  width: 100%;
+  transition: opacity 0.5s ease;
+}
+.slides img.active {
+  display: block; /* Only show the active image */
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+#prevBtn { left: 10px; }
+#nextBtn { right: 10px; }
