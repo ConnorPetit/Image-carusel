@@ -1,1 +1,1 @@
-# Image-carusel
+# Image-carousel
